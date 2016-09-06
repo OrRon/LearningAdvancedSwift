@@ -10,9 +10,6 @@ import Foundation
 import ReSwift
 
 struct AddTask: Action {
-    // identifies the action
     let task: String
-    // this flag is used for serialization when working with ReSwift Recorder
     let isTypedAction: Bool
-    
 }

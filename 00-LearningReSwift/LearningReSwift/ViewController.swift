@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.tableView.editing = true
+        
         // Do any additional setup after loading the view, typically from a nib.
         mainStore.subscribe(self)
         
@@ -36,15 +38,19 @@ class ViewController: UIViewController {
 }
 
 extension ViewController: UITableViewDelegate {
-    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
+    
+    func tableView(tableView: UITableView, shouldIndentWhileEditingRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
     }
-   
-    
-    
+    func tableView(tableView: UITableView, editingStyleForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCellEditingStyle {
+        return .None
+    }
 }
 extension ViewController: UITableViewDataSource {
     
+    func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return true
+    }
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return mainStore.state.tasklist.count
     }
@@ -54,7 +60,9 @@ extension ViewController: UITableViewDataSource {
         cell.smallText!.text = mainStore.state.tasklist[indexPath.row]
         return cell
     }
-    
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        print("moved")
+    }
     
 }
 
