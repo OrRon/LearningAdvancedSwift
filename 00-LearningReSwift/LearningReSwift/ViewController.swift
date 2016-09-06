@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         
         self.tableView.editing = true
         
-        // Do any additional setup after loading the view, typically from a nib.
+        //Subscribing for state changes
         mainStore.subscribe(self)
         
     }
@@ -29,6 +29,7 @@ class ViewController: UIViewController {
 
     @IBAction func onEditingEnd(textField: UITextField) {
         
+        // calling an action to change the store
         mainStore.dispatch(
             AddTask(task:textField.text!,isTypedAction:true)
         )
