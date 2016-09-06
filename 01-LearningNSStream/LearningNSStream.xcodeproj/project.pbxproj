@@ -14,6 +14,8 @@
 		2C9407061D7F3B7C00ED1FC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9407041D7F3B7C00ED1FC7 /* LaunchScreen.storyboard */; };
 		2C9407111D7F3B7C00ED1FC7 /* LearningNSStreamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9407101D7F3B7C00ED1FC7 /* LearningNSStreamTests.swift */; };
 		2C94071C1D7F3B7C00ED1FC7 /* LearningNSStreamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C94071B1D7F3B7C00ED1FC7 /* LearningNSStreamUITests.swift */; };
+		2C94072A1D7F4BBF00ED1FC7 /* PortScannedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9407291D7F4BBF00ED1FC7 /* PortScannedCell.swift */; };
+		2C94072C1D7F4DB900ED1FC7 /* PortScanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C94072B1D7F4DB900ED1FC7 /* PortScanner.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		2C9407171D7F3B7C00ED1FC7 /* LearningNSStreamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LearningNSStreamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C94071B1D7F3B7C00ED1FC7 /* LearningNSStreamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearningNSStreamUITests.swift; sourceTree = "<group>"; };
 		2C94071D1D7F3B7C00ED1FC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C9407291D7F4BBF00ED1FC7 /* PortScannedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortScannedCell.swift; sourceTree = "<group>"; };
+		2C94072B1D7F4DB900ED1FC7 /* PortScanner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PortScanner.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,8 @@
 			children = (
 				2C9406FB1D7F3B7C00ED1FC7 /* AppDelegate.swift */,
 				2C9406FD1D7F3B7C00ED1FC7 /* ViewController.swift */,
+				2C9407291D7F4BBF00ED1FC7 /* PortScannedCell.swift */,
+				2C94072B1D7F4DB900ED1FC7 /* PortScanner.swift */,
 				2C9406FF1D7F3B7C00ED1FC7 /* Main.storyboard */,
 				2C9407021D7F3B7C00ED1FC7 /* Assets.xcassets */,
 				2C9407041D7F3B7C00ED1FC7 /* LaunchScreen.storyboard */,
@@ -256,6 +262,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C94072A1D7F4BBF00ED1FC7 /* PortScannedCell.swift in Sources */,
+				2C94072C1D7F4DB900ED1FC7 /* PortScanner.swift in Sources */,
 				2C9406FE1D7F3B7C00ED1FC7 /* ViewController.swift in Sources */,
 				2C9406FC1D7F3B7C00ED1FC7 /* AppDelegate.swift in Sources */,
 			);
@@ -484,6 +492,7 @@
 				2C9407221D7F3B7C00ED1FC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C9407231D7F3B7C00ED1FC7 /* Build configuration list for PBXNativeTarget "LearningNSStreamTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +501,7 @@
 				2C9407251D7F3B7C00ED1FC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C9407261D7F3B7C00ED1FC7 /* Build configuration list for PBXNativeTarget "LearningNSStreamUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +510,7 @@
 				2C9407281D7F3B7C00ED1FC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
