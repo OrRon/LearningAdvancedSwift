@@ -13,3 +13,8 @@ struct AddTask: Action {
     let task: String
     let isTypedAction: Bool
 }
+
+struct Reorder: Action {
+    let index: NSIndexPath
+    let newIndex: NSIndexPath
+}

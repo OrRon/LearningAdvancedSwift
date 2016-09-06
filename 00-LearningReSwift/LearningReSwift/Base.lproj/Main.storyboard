@@ -41,8 +41,27 @@
                                 <rect key="frame" x="20" y="124" width="560" height="476"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="HeaderCell" rowHeight="36" id="Lha-8N-6g2" customClass="HeaderCell" customModule="LearningReSwift" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="560" height="36"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Lha-8N-6g2" id="GDt-TY-BBj">
+                                            <rect key="frame" x="0.0" y="0.0" width="560" height="36"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMA-x8-WI0">
+                                                    <rect key="frame" x="8" y="7" width="544" height="21"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                    <color key="textColor" red="0.1137254902" green="0.73725490199999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="title" destination="ZMA-x8-WI0" id="KdR-VA-xAW"/>
+                                        </connections>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="RegularCell" rowHeight="41" id="Y0x-AU-x18" customClass="RegularCell" customModule="LearningReSwift" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="560" height="41"/>
+                                        <rect key="frame" x="0.0" y="64" width="560" height="41"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y0x-AU-x18" id="jxf-R8-51N">
                                             <rect key="frame" x="0.0" y="0.0" width="560" height="41"/>

@@ -48,20 +48,46 @@ extension ViewController: UITableViewDelegate {
 }
 extension ViewController: UITableViewDataSource {
     
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 3
+    }
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let header = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as! HeaderCell
+        switch section {
+        case 0:
+            header.title.text = "Urgent"
+        case 1:
+            header.title.text = "Later"
+        case 2:
+            header.title.text = "Someday"
+        default:
+            break
+        }
+        return header
+        
+    }
     func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         return true
     }
+    
+    
+    
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return mainStore.state.tasklist.count
+        
+        return mainStore.state.list[section].count
+
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("RegularCell", forIndexPath: indexPath) as! RegularCell
-        cell.smallText!.text = mainStore.state.tasklist[indexPath.row]
+        cell.smallText!.text = mainStore.state.list[indexPath.section][indexPath.row]
         return cell
     }
     func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
-        print("moved")
+        mainStore.dispatch (
+            Reorder(index: sourceIndexPath, newIndex: destinationIndexPath)
+        )
+        
     }
     
 }
@@ -69,6 +95,5 @@ extension ViewController: UITableViewDataSource {
 extension ViewController: StoreSubscriber {
     func newState(state: AppState) {
         self.tableView.reloadData()
-        print(state.tasklist)
     }
 }

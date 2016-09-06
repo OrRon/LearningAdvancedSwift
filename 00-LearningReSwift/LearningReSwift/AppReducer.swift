@@ -11,11 +11,16 @@ import ReSwift
 
 struct AppReducer: Reducer {
     
+    
     func handleAction(action: Action, state: AppState?) -> AppState {
         var state = state ?? AppState()
         switch action {
         case let action as AddTask:
-            state.tasklist.append(action.task)
+            state.list[0].insert(action.task, atIndex: 0)
+        case let action as Reorder:
+            let item = state.list[action.index.section].removeAtIndex(action.index.row)
+            state.list[action.newIndex.section].insert(item, atIndex:action.newIndex.row)
+            
         default:
             break
         }

@@ -9,5 +9,5 @@
 import Foundation
 import ReSwift
 struct AppState: StateType {
-    var tasklist = [String]()
+    var list:[[String]] = [[],[],[]]
 }

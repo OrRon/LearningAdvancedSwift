@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		08CE84903C744C8BF5E2EA5E /* Pods_LearningReSwiftUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BE95492DBFEA1BF423EA95A4 /* Pods_LearningReSwiftUITests.framework */; };
+		2C3376D01D7EE432000158BE /* HeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C3376CF1D7EE432000158BE /* HeaderCell.swift */; };
 		2C4EAC2F1D7435D200643F03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EAC2E1D7435D200643F03 /* AppDelegate.swift */; };
 		2C4EAC311D7435D200643F03 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4EAC301D7435D200643F03 /* ViewController.swift */; };
 		2C4EAC341D7435D200643F03 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C4EAC321D7435D200643F03 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 /* Begin PBXFileReference section */
 		108891B889B5D877477EB1E8 /* Pods-LearningReSwiftTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningReSwiftTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LearningReSwiftTests/Pods-LearningReSwiftTests.debug.xcconfig"; sourceTree = "<group>"; };
 		16A2A6866AA7841D04EAB54B /* Pods-LearningReSwift.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LearningReSwift.release.xcconfig"; path = "Pods/Target Support Files/Pods-LearningReSwift/Pods-LearningReSwift.release.xcconfig"; sourceTree = "<group>"; };
+		2C3376CF1D7EE432000158BE /* HeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderCell.swift; sourceTree = "<group>"; };
 		2C4EAC2B1D7435D200643F03 /* LearningReSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LearningReSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C4EAC2E1D7435D200643F03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C4EAC301D7435D200643F03 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -128,6 +130,7 @@
 				2C4EAC301D7435D200643F03 /* ViewController.swift */,
 				2C7907471D7E162B001AD8F9 /* AppReducer.swift */,
 				2C7907491D7E1C71001AD8F9 /* RegularCell.swift */,
+				2C3376CF1D7EE432000158BE /* HeaderCell.swift */,
 				2C4EAC321D7435D200643F03 /* Main.storyboard */,
 				2C4EAC351D7435D200643F03 /* Assets.xcassets */,
 				2C4EAC371D7435D200643F03 /* LaunchScreen.storyboard */,
@@ -445,6 +448,7 @@
 				2C4EAC311D7435D200643F03 /* ViewController.swift in Sources */,
 				2C4EAC2F1D7435D200643F03 /* AppDelegate.swift in Sources */,
 				2C7907481D7E162B001AD8F9 /* AppReducer.swift in Sources */,
+				2C3376D01D7EE432000158BE /* HeaderCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
