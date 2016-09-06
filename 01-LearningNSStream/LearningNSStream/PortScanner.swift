@@ -59,6 +59,7 @@ extension PortScanner: NSStreamDelegate {
         case NSStreamEvent.OpenCompleted:
             print("OpenCompleted")
             if aStream is NSInputStream {
+                status = "Port is Open"
                 dispatch_async(dispatch_get_main_queue(),{
                     self.sendMessage()
                 })
@@ -72,6 +73,7 @@ extension PortScanner: NSStreamDelegate {
                     if(len > 0){
                         let output = NSString(bytes: &buffer, length: buffer.count, encoding: NSUTF8StringEncoding)
                         if (output != ""){
+                            //If we got response write the respone back
                             status = String(output)
                             NSLog("server said: %@", output!)
                         }
@@ -79,6 +81,7 @@ extension PortScanner: NSStreamDelegate {
                 }
             }
         case NSStreamEvent.ErrorOccurred:
+            //if error occured mark port as closed
             status = "Port is closed"
             print("ErrorOccurred")
         case NSStreamEvent.EndEncountered:

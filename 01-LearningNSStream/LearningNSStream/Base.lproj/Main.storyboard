@@ -25,7 +25,7 @@
             </objects>
             <point key="canvasLocation" x="-467" y="-28"/>
         </scene>
-        <!--Port Tester-->
+        <!--Port Scanner-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="LearningNSStream" customModuleProvider="target" sceneMemberID="viewController">
@@ -68,6 +68,9 @@
                                 <color key="textColor" red="0.1137254902" green="0.73725490199999999" blue="0.99607843139999996" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="onConnect" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="fMb-Ff-A6v"/>
+                                </connections>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0M7-Ne-aYn">
                                 <rect key="frame" x="374" y="79" width="14" height="32"/>
@@ -79,7 +82,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="226" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="svR-Nx-sBi">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="226" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="svR-Nx-sBi">
                                 <rect key="frame" x="0.0" y="130" width="600" height="470"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -175,7 +178,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="svR-Nx-sBi" secondAttribute="trailing" constant="-20" id="zAL-GL-qJb"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Port Tester" id="Vhq-Pi-dld"/>
+                    <navigationItem key="navigationItem" title="Port Scanner" id="Vhq-Pi-dld"/>
                     <connections>
                         <outlet property="addrText" destination="0TQ-UR-fpJ" id="qxI-ga-b8p"/>
                         <outlet property="portText" destination="8yI-qb-Cxt" id="Cwr-Zs-H6t"/>
